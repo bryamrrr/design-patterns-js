@@ -8,7 +8,7 @@ class Singleton {
 
   init() {
     function privateMethod() {
-      console.log( "I am private" );
+      console.log( 'I am private' );
     }
 
     let privateRandomNumber = Math.round(Math.random()*1000);
@@ -16,9 +16,9 @@ class Singleton {
     return {
       publicMethod: function () {
         privateMethod();
-        console.log( "The public can see me!" );
+        console.log( 'The public can see me!' );
       },
-      publicProperty: "I am also public",
+      publicProperty: 'I am also public',
       getRandomNumber: function() {
         return privateRandomNumber;
       }
@@ -31,4 +31,4 @@ var singleB = new Singleton();
 
 console.log(`singleA random has a value of ${singleA.getRandomNumber()}`);
 console.log(`singleB random has a value of ${singleB.getRandomNumber()}`);
-console.log("same? " + (singleA.getRandomNumber() === singleB.getRandomNumber()) );
+console.log('same? ' + (singleA.getRandomNumber() === singleB.getRandomNumber()) );
